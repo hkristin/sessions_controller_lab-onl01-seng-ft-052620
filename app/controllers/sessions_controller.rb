@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
     if !params[:name] || params[:name].empty?
       redirect_to(controller: 'sessions', action: 'new')
     else
-      session[:username] = params[:username]
-      redirect_to '/login'
+      session[:name] = params[:rname]
+      rredirect_to controller: 'application', action: 'hello'
   end
 end
 
