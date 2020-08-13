@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       session[:username] = params[:username]
       redirect_to '/login'
   end
+end
 
   def destroy
     session.delete :username
